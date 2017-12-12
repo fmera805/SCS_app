@@ -37,7 +37,7 @@ public class Search2 extends HttpServlet {
  
             ArrayList al = null;
             ArrayList pid_list = new ArrayList();
-            String query = "select * from users where id='" + pid + "' ";
+            String query = "select * from users where id='" + pid + "' "; //id
  
             System.out.println("query " + query);
             st = conn.createStatement();
@@ -60,7 +60,7 @@ public class Search2 extends HttpServlet {
             }
  
             request.setAttribute("piList", pid_list);
-            RequestDispatcher view = request.getRequestDispatcher("/searchview.jsp");
+            RequestDispatcher view = request.getRequestDispatcher("/searchview2.jsp");
             view.forward(request, response);
             conn.close();
             System.out.println("Disconnected!");
